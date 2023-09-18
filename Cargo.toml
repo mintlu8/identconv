@@ -6,10 +6,10 @@ license = "MIT OR Apache-2.0"
 readme = "README.md"
 repository = "https://github.com/mintlu8/identconv"
 description = """
-Convinient macros to turn idents into idents or strings by case converting.
+Convenient macros to turn idents or string literals into another ident or string literal by case converting.
 """
 keywords = ["macros", "ident", "case", "casing", "string"]
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 
 [lib]
