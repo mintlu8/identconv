@@ -1,0 +1,20 @@
+[package]
+name = "identconv"
+authors = ["Mincong Lu <mintlux667@gmail.com>"]
+license = "MIT OR Apache-2.0"
+
+readme = "README.md"
+repository = "https://github.com/mintlu8/identconv"
+description = """
+Convinient macros to turn idents into idents or strings by case converting.
+"""
+keywords = ["macros", "ident", "case", "casing", "string"]
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+proc-macro=true
+
+[dependencies]
+convert_case = "0.6"
+litrs = "0.4"
