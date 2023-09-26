@@ -6,9 +6,7 @@ string literals into `Idents` or `Strings` by case converting.
 ## Macros
 
 | Macro | Case | Output |
-
------
-
+| ----- | --- | --- |
 | `lower!()` | flatlowercase | `Ident` |
 | `upper!()` | FLATUPPERCASE | `Ident` |
 | `snake!()` | snake_case | `Ident` |
@@ -18,7 +16,6 @@ string literals into `Idents` or `Strings` by case converting.
 | `kebab!()` | kebab-case | `Ident` |
 | `ukebab!()` | UPPER-KEBAB-CASE | `Ident` |
 | `train!()` | Train-Case | `Ident` |
-
 | `lower_strify!()` | flatlowercase | `&'static str` |
 | `upper_strify!()` | FLATUPPERCASE | `&'static str` |
 | `snake_strify!()` | snake_case | `&'static str` |
