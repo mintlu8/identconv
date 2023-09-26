@@ -5,7 +5,7 @@ string literals into `Idents` or `Strings` by case converting.
 
 ## Macros
 
-| Macro | Case | Output |
+| Macro | To Case | Output |
 | ----- | --- | --- |
 | `lower!()` | flatlowercase | `Ident` |
 | `upper!()` | FLATUPPERCASE | `Ident` |
