@@ -20,7 +20,7 @@ string literals into `Idents` or `Strings` by case converting.
 | `train!()` | Train-Case | `Ident` |
 
 | `lower_strify!()` | flatlowercase | `&'static str` |
-| `upper_strify!()` | FLATUPPERCASE | `Iden&'static strt` |
+| `upper_strify!()` | FLATUPPERCASE | `&'static str` |
 | `snake_strify!()` | snake_case | `&'static str` |
 | `usnake_strify!()` | UPPER_SNAKE_CASE | `&'static str` |
 | `camel_strify!()` | camelCase | `&'static str` |
