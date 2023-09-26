@@ -1,6 +1,6 @@
 # identconv
 
-Convenient macros that turns `Idents` or ident like
+Convenient macros that turn `Idents` or ident like
 string literals into `Idents` or `Strings` by case converting.
 
 ## Macros
@@ -13,9 +13,6 @@ string literals into `Idents` or `Strings` by case converting.
 | `usnake!()` | UPPER_SNAKE_CASE | `Ident` |
 | `camel!()` | camelCase | `Ident` |
 | `pascal!()` | PascalCase | `Ident` |
-| `kebab!()` | kebab-case | `Ident` |
-| `ukebab!()` | UPPER-KEBAB-CASE | `Ident` |
-| `train!()` | Train-Case | `Ident` |
 | `lower_strify!()` | flatlowercase | `&'static str` |
 | `upper_strify!()` | FLATUPPERCASE | `&'static str` |
 | `snake_strify!()` | snake_case | `&'static str` |
@@ -25,3 +22,6 @@ string literals into `Idents` or `Strings` by case converting.
 | `kebab_strify!()` | kebab-case | `&'static str` |
 | `ukebab_strify!()` | UPPER-KEBAB-CASE | `&'static str` |
 | `train_strify!()` | Train-Case | `&'static str` |
+| `english_lower!()` | lower case | `&'static str` |
+| `english_upper!()` | UPPER CASE | `&'static str` |
+| `english_title!()` | Title Case | `&'static str` |

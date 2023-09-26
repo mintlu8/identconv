@@ -1,4 +1,4 @@
-//! Convenient macros that turns [`Idents`](proc_macro::Ident) or ident like
+//! Convenient macros that turn [`Idents`](proc_macro::Ident) or ident like
 //! [string literals](proc_macro::Literal) into idents or string literals by case converting.
 
 use proc_macro::{TokenStream, TokenTree, Literal, Ident};
@@ -113,6 +113,28 @@ pub fn train_strify(s: TokenStream) -> TokenStream{
     strify(s, |ident| ident.to_case(Train))
 }
 
+
+/// Convert an [`Ident`](proc_macro::Ident) or a [string literal](proc_macro::Literal) 
+/// to a "lower case" [`&'static str`](str)
+#[proc_macro]
+pub fn english_lower(s: TokenStream) -> TokenStream{
+    strify(s, |ident| ident.to_case(Lower))
+}
+
+/// Convert an [`Ident`](proc_macro::Ident) or a [string literal](proc_macro::Literal) 
+/// to a "UPPER CASE" [`&'static str`](str)
+#[proc_macro]
+pub fn english_upper(s: TokenStream) -> TokenStream{
+    strify(s, |ident| ident.to_case(Upper))
+}
+
+/// Convert an [`Ident`](proc_macro::Ident) or a [string literal](proc_macro::Literal) 
+/// to a "Titile Case" [`&'static str`](str)
+#[proc_macro]
+pub fn english_title(s: TokenStream) -> TokenStream{
+    strify(s, |ident| ident.to_case(Title))
+}
+
 /// Convert an [`Ident`](proc_macro::Ident) or a [string literal](proc_macro::Literal) 
 /// to a flatlowercase [`Ident`](proc_macro::Ident)
 #[proc_macro]
@@ -153,25 +175,4 @@ pub fn camel(s: TokenStream) -> TokenStream{
 #[proc_macro]
 pub fn pascal(s: TokenStream) -> TokenStream{
     ident_conv(s, |ident| ident.to_case(Pascal))
-}
-
-/// Convert an [`Ident`](proc_macro::Ident) or a [string literal](proc_macro::Literal) 
-/// to a kebab-case [`Ident`](proc_macro::Ident)
-#[proc_macro]
-pub fn kebab(s: TokenStream) -> TokenStream{
-    ident_conv(s, |ident| ident.to_case(Kebab))
-}
-
-/// Convert an [`Ident`](proc_macro::Ident) or a [string literal](proc_macro::Literal) 
-/// to a UPPER-KEBAB-CASE [`Ident`](proc_macro::Ident)
-#[proc_macro]
-pub fn ukebab(s: TokenStream) -> TokenStream{
-    ident_conv(s, |ident| ident.to_case(UpperKebab))
-}
-
-/// Convert an [`Ident`](proc_macro::Ident) or a [string literal](proc_macro::Literal) 
-/// to a Train-Case [`Ident`](proc_macro::Ident)
-#[proc_macro]
-pub fn train(s: TokenStream) -> TokenStream{
-    ident_conv(s, |ident| ident.to_case(Train))
 }
